@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
     # body parameter
     post '/body_parameter_url' => 'params#body_param_action'
-  #   get "/photos" => "photos#index"
+    post '/guess_a_number_body' => 'params#game'
+    post '/auth' => 'params#authentication'
+    #   get "/photos" => "photos#index"
   end
 end
