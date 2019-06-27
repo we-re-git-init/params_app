@@ -33,4 +33,17 @@ class Api::ParamsController < ApplicationController
     @name = params["name"]
     render 'segment_view.json.jb'
   end
+
+  def number_game
+    the_guess = params["the_number"].to_i
+    # compare that user input to the actual answer
+    if the_guess == 32
+      @user_feedback = "you win"
+    elsif the_guess > 32
+      @user_feedback = "too high"
+    elsif the_guess < 32
+      @user_feedback = "too low"
+    end
+    render 'guessing.json.jb'
+  end
 end
