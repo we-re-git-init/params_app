@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     get '/segment_parameter_url/:name' => 'params#url_segment_method'
     get '/segment_guessing_game/:user_guess' => 'params#game'
 
+    # body parameter
+    post '/body_parameter_url' => 'params#body_param_action'
   #   get "/photos" => "photos#index"
   end
 end
