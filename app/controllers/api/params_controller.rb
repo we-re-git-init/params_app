@@ -30,6 +30,7 @@ class Api::ParamsController < ApplicationController
   end
 
   def url_segment_method
+    @name = params["name"]
     render 'segment_view.json.jb'
   end
 end
