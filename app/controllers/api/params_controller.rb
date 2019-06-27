@@ -28,4 +28,8 @@ class Api::ParamsController < ApplicationController
     # give the user a message based on their guess
     render 'guess.json.jb'
   end
+
+  def url_segment_method
+    render 'segment_view.json.jb'
+  end
 end
