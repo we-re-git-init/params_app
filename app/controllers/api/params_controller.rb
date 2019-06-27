@@ -35,6 +35,7 @@ class Api::ParamsController < ApplicationController
   end
 
   def body_param_action
+    @name = params[:name]
     render 'body.json.jb'
   end
 end
